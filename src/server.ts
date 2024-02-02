@@ -14,7 +14,7 @@ const upload = multer({ dest: 'uploads/' });
 app.use(cors());
 
 app.get('/', (req: Request, res: Response) => {
-  res.send('Hello, World!');
+  res.send('Seja bem vindo ao PSD Reader!');
 });
 
 app.post('/upload', upload.single('psdFile'), async (req: Request, res: Response) => {
