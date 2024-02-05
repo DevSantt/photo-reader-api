@@ -33,13 +33,13 @@ The project does not yet have a oficial production deployment. But you can start
 1. Clone the repository
 
 ```
-git clone https://github.com/omatheusant/psd-reader.git
+git clone https://github.com/omatheusant/photo-reader-api.git
 ```
 
 2. Enter the repo directory
 
 ```
-cd ./psd-reader/
+cd ./photo-reader-api/
 ```
 
 3. Install the projects dependencies
@@ -58,7 +58,7 @@ If is all right, the message `Server is running at http://localhost:3001` will b
 
 ## 📫 Contributing
 
-To contribute with the PSD Reader API, follow this steps!
+To contribute with the Photo Reader API, follow this steps!
 
 1. Fork this repository.
 2. Create a branch: `git checkout -b <branch_name>`.
