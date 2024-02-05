@@ -17,7 +17,7 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.post(
-  "/upload",
+  "/api/parse-psd",
   upload.single("psdFile"),
   async (req: Request, res: Response) => {
     const psdFile = req.file;
@@ -42,12 +42,9 @@ app.post(
       res.status(200).send({ layers });
     } catch (error) {
       console.error(`Something went wrong: ${error}`);
-      res
-        .status(400)
-        .json({
-          error:
-            "Internal server error reading the PSD file, please try again.",
-        });
+      res.status(400).json({
+        error: "Internal server error reading the PSD file, please try again.",
+      });
     } finally {
       fs.unlinkSync(psdFile.path);
       console.log(`${psdFile.path} was removed.`);
